@@ -47,7 +47,7 @@ export default function App() {
     setLoading(true);
 
     try {
-      // Step 1: Get AI response from Langflow
+      //  AI response from Langflow
       const res = await fetch("/api/langflow", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -64,17 +64,20 @@ export default function App() {
       const aiText = data.outputText || "";
       setResponse(aiText);
 
-      // Step 2: Send AI text to Meshy to generate a .glb
+      // text to Meshy to generate a .glb
 
-      const meshyRes = await fetch("/api/meshy", {
-        method: "POST", // Must be POST!
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt: aiText }),
-      });
+      // const meshyRes = await fetch("/api/meshy", {
+      //   method: "POST", // Must be POST!
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({ prompt: aiText }),
+      // });
 
-      const meshyData = await meshyRes.json();
-      console.log("Meshy GLB URL:", meshyData.glbUrl);
-      setModelUrl(meshyData.glbUrl || null);
+      // const meshyData = await meshyRes.json();
+      // console.log("Meshy GLB URL:", meshyData.glbUrl);
+      // setModelUrl(meshyData.glbUrl || null);
+
+
+
     } catch (err) {
       console.error(err);
     } finally {
