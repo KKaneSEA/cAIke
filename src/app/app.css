@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Sono:wght@300;400;500;800&display=swap");
 
 
-.root {
+body {
    background-color: #ff9999;
 }
 .loading-Font {
@@ -144,7 +144,7 @@
   padding-bottom: 1rem;
 
   border-radius: 8px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   line-height: 1.5;
   font-family: inherit;
   box-sizing: border-box;
